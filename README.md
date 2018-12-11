@@ -1,0 +1,4 @@
+
+```bash
+curl ${scriptLocation} | bash
+```
