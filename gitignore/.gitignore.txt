@@ -1,0 +1,15 @@
+#mac
+.DS_Store
+._*
+
+#idea
+.idea
+
+#custom
+local
+unversioned*
+
+# pack
+*.zip
+*.tar
+*.dmg
