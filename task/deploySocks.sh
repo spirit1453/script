@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo 'deploy start';
+echo 'deployment start';
 curl -sSL https://get.docker.com -o get-docker.sh | bash;
 systemctl start docker;
 systemctl enable docker;
