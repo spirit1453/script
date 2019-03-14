@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+STARTTIME=$(date +'%s')
 echo 'deployment start';
 curl -S https://get.docker.com| bash;
 systemctl start docker;
@@ -10,5 +11,7 @@ echo 'docker socks container started';
 sed -i 's/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf;
 echo 'net.ipv4.ip_forward changed to 0'
 systemctl restart network;
+ENDTIME=$(date +%s)
 echo 'socks5 deployed successfually :-)';
+echo "It takes $(expr $ENDTIME - $STARTTIME) seconds to complete this task..."
 
