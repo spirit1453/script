@@ -13,5 +13,5 @@ echo 'net.ipv4.ip_forward changed to 1'
 systemctl restart network;
 ENDTIME=$(date +%s)
 echo 'socks5 deployed successfually :-)';
-echo "It takes $(expr $ENDTIME - $STARTTIME) seconds to complete this task..."
+echo "It takes $(expr $ENDTIME - $STARTTIME) seconds to complete this task"
 
