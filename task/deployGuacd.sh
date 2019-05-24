@@ -10,7 +10,6 @@ cd guacamole-server-0.9.11-incubating &&
 make &&
 make install &&
 ldconfig &&
-guacd &&
 mkdir /usr/share/tomcat/.guacamole &&
 mkdir /usr/share/tomcat/.guacamole/extensions &&
 cd /usr/share/tomcat/.guacamole &&
@@ -25,6 +24,7 @@ chown tomcat:tomcat guacamole.properties &&
 chmod 600 noauth-config.xml &&
 chown tomcat:tomcat noauth-config.xml &&
 tomcat start &&
+guacd &&
 echo 'guacd service deployed' &&
 curl http://192.144.200.234:3000/other/console.zip -o /opt/console.zip &&
 unzip /opt/console.zip -d /opt &&
