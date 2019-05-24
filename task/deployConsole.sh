@@ -3,7 +3,7 @@ STARTTIME=$(date +'%s') &&
 yum install java-1.8.0-openjdk-devel cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel uuid-devel libvncserver-devel openssl-devel gcc tomcat -y &&
 echo 'dependency installed' &&
 curl https://raw.githubusercontent.com/spirit1453/download/master/console/java.security -o /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/security/java.security &&
-curl http://archive.apache.org/dist/incubator/guacamole/0.9.11-incubating/source/guacamole-server-0.9.11-incubating.tar.gz -o /opt/guacamole-server-0.9.11-incubating.tar.gz &&
+curl http://192.144.200.234:3000/other/guacamole-server-0.9.11-incubating.tar.gz -o /opt/guacamole-server-0.9.11-incubating.tar.gz &&
 cd /opt &&
 tar -xzf guacamole-server-0.9.11-incubating.tar.gz &&
 cd guacamole-server-0.9.11-incubating &&
