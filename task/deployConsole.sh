@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STARTTIME=$(date +'%s')
+STARTTIME=$(date +'%s') &&
 yum install java-1.8.0-openjdk-devel cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel uuid-devel libvncserver-devel openssl-devel gcc tomcat -y &&
 echo 'dependency installed' &&
 curl https://raw.githubusercontent.com/spirit1453/download/master/console/java.security -o /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/security/java.security &&
@@ -30,12 +30,12 @@ guacd &&
 echo 'guacd service deployed' &&
 curl http://192.144.200.234:3000/other/console.zip -o /opt/console.zip &&
 unzip /opt/console.zip -d /opt &&
-ip=$(curl http://whatismyip.akamai.com/)
-echo "server ip: $ip"
-path=/opt/console/startup.sh
+ip=$(curl http://whatismyip.akamai.com/) &&
+echo "server ip: $ip" &&
+path=/opt/console/startup.sh &&
 sed -i -e "s/DconsoleServer=/DconsoleServer=$ip/g" ${path} &&
 sed -i -e "s/DvncServer=/DvncServer=$ip/g" ${path} &&
 sh ${path} &&
-echo 'console deployed successfually :-)'
-ENDTIME=$(date +%s)
+echo 'console deployed successfually :-)' &&
+ENDTIME=$(date +%s) &&
 echo "It takes $(expr $ENDTIME - $STARTTIME) seconds to complete this task"
