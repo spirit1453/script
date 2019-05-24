@@ -30,6 +30,12 @@ guacd &&
 echo 'guacd service deployed' &&
 curl http://192.144.200.234:3000/other/console.zip -o /opt/console.zip &&
 unzip /opt/console.zip -d /opt &&
+ip=$(curl http://whatismyip.akamai.com/)
+echo "server ip: $ip"
+path=/opt/console/startup.sh
+sed -i -e "s/DconsoleServer=/DconsoleServer=$ip/g" ${path} &&
+sed -i -e "s/DvncServer=/DvncServer=$ip/g" ${path} &&
+sh ${path} &&
 echo 'console deployed successfually :-)'
 ENDTIME=$(date +%s)
 echo "It takes $(expr $ENDTIME - $STARTTIME) seconds to complete this task"
