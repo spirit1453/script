@@ -19,6 +19,7 @@ curl https://raw.githubusercontent.com/spirit1453/download/master/console/guacam
 curl https://raw.githubusercontent.com/spirit1453/download/master/console/extensions/guacamole-auth-noauth-0.9.11-incubating.jar -o /usr/share/tomcat/.guacamole/extensions/guacamole-auth-noauth-0.9.11-incubating.jar &&
 curl https://raw.githubusercontent.com/spirit1453/download/master/console/tomcat.keystore -o /usr/share/tomcat/tomcat.keystore &&
 curl https://raw.githubusercontent.com/spirit1453/download/master/console/server.xml -o /usr/share/tomcat/conf/server.xml &&
+curl https://raw.githubusercontent.com/spirit1453/download/master/console/guacamole.war -o /usr/share/tomcat/webapps/guacamole.war &&
 chmod 600 guacamole.properties &&
 chown tomcat:tomcat guacamole.properties &&
 chmod 600 noauth-config.xml &&
