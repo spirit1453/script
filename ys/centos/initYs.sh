@@ -5,7 +5,7 @@ getTime(){
 }
 startTime=`getTime`
 echo '********************************************'
-echo 'version 0.0.5'
+echo 'version 0.0.6'
 echo '******************************************** \n'
 
 
@@ -16,9 +16,9 @@ node --version
 npm --version
 npmYsCmd='npm i spirit1453/global_script#dev_z -g'
 echo $npmYsCmd
-sudo $npmYsCmd
 npm config set registry https://registry.npm.taobao.org/
 npm config get registry
+sudo $npmYsCmd
 ysjs
 echo "Time elapsed: `expr $endTime - $startTime` s"
 
