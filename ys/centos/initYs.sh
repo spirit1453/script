@@ -5,9 +5,13 @@ getTime(){
 }
 startTime=`getTime`
 
-echo "Time elapsed: `expr $endTime - $startTime` s"
+echo 'version 0.0.1'
+
 yum install -y gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
 yum install -y nodejs
 npm i spirit1453/global_script#dev_z -g
+
+echo "Time elapsed: `expr $endTime - $startTime` s"
+
 endTime=`getTime`
