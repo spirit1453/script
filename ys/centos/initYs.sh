@@ -4,8 +4,10 @@ getTime(){
     date '+%s'
 }
 startTime=`getTime`
-
+echo '********************************************'
 echo 'version 0.0.1'
+echo '******************************************** \n'
+
 
 yum install -y gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
