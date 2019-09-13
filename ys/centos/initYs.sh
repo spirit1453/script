@@ -5,14 +5,16 @@ getTime(){
 }
 startTime=`getTime`
 echo '********************************************'
-echo 'version 0.0.1'
+echo 'version 0.0.2'
 echo '******************************************** \n'
 
 
 yum install -y gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
 yum install -y nodejs
-sudo npm i spirit1453/global_script#dev_z -g
+npmYsCmd='npm i spirit1453/global_script#dev_z -g'
+echo $npmYsCmd
+sudo $npmYsCmd
 
 echo "Time elapsed: `expr $endTime - $startTime` s"
 
