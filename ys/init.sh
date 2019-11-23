@@ -1,3 +1,4 @@
+set -e
 workingOnDir=~/entry/code/working_on
 if [ ! -d $workingOnDir ]; then
     mkdir -p $workingOnDir
