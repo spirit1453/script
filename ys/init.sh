@@ -9,4 +9,6 @@ if [ ! -d $globalScriptDit ]; then
     cd $globalScriptDit
     git checkout dev_z
 fi
-
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+which node || sudo apt install nodejs
+which npm || sudo apt install nodejs
