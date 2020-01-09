@@ -2,4 +2,4 @@ powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((
 && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 && choco install nodejs -y
 && choco install git -y
-&&
+
