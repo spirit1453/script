@@ -1,0 +1,1 @@
+curl https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe -o Git-2.24.1.2-64-bit.exe && Git-2.24.1.2-64-bit.exe
