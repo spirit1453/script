@@ -3,7 +3,7 @@ install mysql 8 on centos 7
 
 1. add repo
    ```
-   sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+   sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm -y
    ```
 
    check it 
@@ -13,7 +13,7 @@ install mysql 8 on centos 7
 
 2. install
    ```
-   sudo yum install mysql-community-server
+   sudo yum install mysql-community-server -y
    ```
 
 3. start mysql
