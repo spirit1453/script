@@ -41,5 +41,5 @@ validate_password.policy=LOW
 ```
 then 
 ```
-sudo service mysqld restart service
+sudo service mysqld restart 
 ```
